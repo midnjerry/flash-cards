@@ -16,7 +16,6 @@ export default createStore({
       'Keaton Kido',
       'Khalil Walker',
       'Maher Nassri',
-      'Malak Alnemer',
       'Matt Xiao',
       'Michael Tarquini',
       'Patrick Solomon',
@@ -417,6 +416,57 @@ export default createStore({
           question: 'In Java, what is a HashMap?',
           answer: 'A HashMap is a Hash table based implementation of a Map.'
         },
+        {
+          category: 'module-1-week5',
+          question: 'In Java, what is an object?',
+          answer: 'An object is an instance of a Java class.'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'In Java, what is an instance?',
+          answer: 'An instance is the digital manifestation of a class.  The instance behavior is derived from the class and is allocated in memory.'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'In Java, what does instantiation mean?',
+          answer: 'Instantiation is when a new instance is allocated in memory.'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'In Java, what keyword is associated with instantiation?',
+          answer: 'new'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'What two characteristics do real-world object share?',
+          answer: '`state` and `behavior`'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'In Object-Oriented Programming, how is `state` represented in a class?',
+          answer: 'member variables'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'In Object-Oriented Programming, how is `behavior` represented in a class?',
+          answer: 'member methods'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'What is encapsulation?',
+          answer: 'Encapsulation is the integration of properties (state) and methods (behavior) into a single unit (a class)'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'True or False: You can instantiate more than one object with a class.',
+          answer: 'true'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'What is a `getter`?',
+          answer: 'A getter is an instance method that returns the value for its specified property.'
+        }
+
     ]
   },
   mutations: {
