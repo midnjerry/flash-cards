@@ -465,8 +465,27 @@ export default createStore({
           category: 'module-1-week5',
           question: 'What is a `getter`?',
           answer: 'A getter is an instance method that returns the value for its specified property.'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'True or False: If a class does not have a constructor defined, Java will provide one',
+          answer: 'True, Java provides an empty constructor under the hood'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'True or False: Defining a constructor in a class removes the hidden empty constructor.',
+          answer: 'True, Java provides an empty constructor under the hood only when there are no defined constructors.'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'What does it mean to overload a method?',
+          answer: 'Overloading a method is when you create a new method with matching name, but different number of arguments.'
+        },
+        {
+          category: 'module-1-week5',
+          question: 'How is a constructor different than a method?',
+          answer: 'A constructor does not have a return type and can only be called once - when the object is being... constructed.'
         }
-
     ]
   },
   mutations: {
