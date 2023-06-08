@@ -574,7 +574,78 @@ export default createStore({
           language: 'Java', category: 'Polymorphism', curriculum: 'module-1-week6',
           question: 'What is data abstraction?',
           answer: 'Data abstraction is the process of hiding the implementation details and showing only functionality.'
-        }
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'What is a unit test?',
+          answer: 'Unit testing is a level of software testing where individual components, or units, of an application are tested.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'How do you treat dependencies for unit testing?',
+          answer: 'Since a unit test should only test the logic of a component, you want to control external factors by faking them.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'What is an integration test?',
+          answer: 'An integration test ensures that multiple components interact with each other correctly.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'What is an end-to-end test?',
+          answer: 'An end-to-end test is an automated test typically with a bot interacting with the UI and ensuring that all subsystems such as the backend and database are working correctly.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'What is a mock?',
+          answer: 'A mock is a "fake" version of a dependency.  You use it to trick your component into thinking its interacting with a real object.  This allows you to isolate the logic of a component for a unit test.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'What are three benefits of unit tests?',
+          answer: 'They protect your code from other developers.  They allow for easier refactoring.  They help detect problems early. They are automated saving the developer time.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'What are three benefits of unit tests?',
+          answer: 'They protect your code from other developers.  They allow for easier refactoring.  They help detect problems early. They are automated saving the developer time.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'What does QA stand for?',
+          answer: 'Quality Assurance'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'Describe the role of a QA team.',
+          answer: 'They are testers (and potentially also developers) who manually test your application and also write automated end-to-end tests.  They provide a fresh perspective and can find bugs a developer misses.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'Why is there potential for clashing between a QA team and a development team?',
+          answer: 'Checks and balances. The QA team has the final say on if a story can be completed, as they have to sign off on new stories.  Any rejected stories could potentially be seen as a good job by QA management while a reduced velocity will look bad to development management.  Numerous bugs make a QA team look bad.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'What is an acceptance test?',
+          answer: 'An acceptance test is the final test done by the customer or user of the system that verifies if a story should be completed.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'What are the 3 "As" of testing?',
+          answer: 'Arrange, Act, Assert'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'What are the 3 stages of test driven development?',
+          answer: 'Red, Green, Refactor - 1. Write a failing test (red) 2. Update your code to make the test pass (green) 3. Refactor your code.'
+        },
+        {
+          language: 'Java', category: 'Unit Testing', curriculum: 'module-1-week7',
+          question: 'Name one characteristic of a GOOD unit test.',
+          answer: '1. Fast! (ms) 2. Repeatable: Always passes or fails 3. Independent: Can be run independently of other tests. 4. Obvious: Clearly explains scenario and expectations'
+        },
+        
     ]
   },
   mutations: {
