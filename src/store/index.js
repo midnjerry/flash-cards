@@ -645,7 +645,66 @@ export default createStore({
           question: 'Name one characteristic of a GOOD unit test.',
           answer: '1. Fast! (ms) 2. Repeatable: Always passes or fails 3. Independent: Can be run independently of other tests. 4. Obvious: Clearly explains scenario and expectations'
         },
-        
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'What is an Exception?',
+          answer: 'An exception is an event which disrupts the normal flow of the program\'s instructions.'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'What happens when an exception is thrown that is unhandled?',
+          answer: 'The program immediately halts with an error message.'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'True or False: Exceptions can be raised and thrown.',
+          answer: 'True - An exception is raised when an error is triggered, and thrown when you want to notify other devs of an invalid operation.'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'What branching mechanism is used to catch exceptions?',
+          answer: 'try-catch-finally'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'True or False: A try block ALWAYS FULLY executes.',
+          answer: 'False - a raised exception would stop the flow in the middle of the block'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'True or False: A catch block ALWAYS executes.',
+          answer: 'False - a catch block only executes if it captures an Exception.'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'True or False: A catch block can be defined to only catch specific exceptions.',
+          answer: 'True - you can choose to catch specific exceptions ie. NullPointerException, or catch the most generic Exception (catches all exceptions)'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'True or False: A finally block ALWAYS executes.',
+          answer: 'Typically true unless you use System.exit()!!!'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'Why would you use try-with-resources?',
+          answer: 'This mechanism guarantees that any connections get closed.'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'Why would you use custom exceptions?',
+          answer: 'This signifies that this is a logical error and that the exception is intentional.  It is not a random bug'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'What is the difference between an Exception and a Runtime Exception?',
+          answer: 'An Exception must be handled either with a `try-catch` block or the `throws` keyword. A Runtime Exception does not have this requirement.'
+        },
+        {
+          language: 'Java', category: 'Exception Handling', curriculum: 'module-1-week7',
+          question: 'Why do some methods use the `throws` keyword?',
+          answer: 'This tells other developers that the code in the method could throw an exception.  This is useful when another dev is using your API.  It is also required if you do not want to wrap an Exception in a try-catch block.'
+        },
     ]
   },
   mutations: {
