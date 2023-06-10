@@ -715,6 +715,11 @@ export default createStore({
           question: 'List one way you can read a file?',
           answer: 'You can use `Scanner`, `FileInputStream`, `FileReader`, or `Files` to read files.'
         },
+        {
+          language: 'Java', category: 'File IO', curriculum: 'module-1-week8',
+          question: 'List one way you can read a file?',
+          answer: 'You can use `Scanner`, `FileInputStream`, `FileReader`, or `Files` to read files.'
+        },
     ]
   },
   mutations: {

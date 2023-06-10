@@ -1,6 +1,8 @@
 <template>
   <main>
+    <timer v-bind:isRunning="isPlaying"></timer>
     <button v-if="!isPlaying" v-on:click="startGame">Start Game</button>
+    <button v-if="isPlaying" v-on:click="stopGame">Stop Game</button>
     <button v-if="isPlaying" v-bind:disabled="!isReady" v-on:click="drawCard">
       Next Card
     </button>
@@ -18,8 +20,10 @@
 
 <script>
 import FlashCard from "../components/FlashCard.vue";
+import Timer from '../components/Timer.vue';
+
 export default {
-  components: { FlashCard },
+  components: { FlashCard, Timer },
   data() {
     return {
       isReady: false,
@@ -38,6 +42,10 @@ export default {
       this.isReady = true;
       this.roster = [...this.$store.state.players];
       this.drawCard();
+    },
+    stopGame() {
+      this.isPlaying = false;
+      this.isReady = true;      
     },
     resetQuestions() {
       this.questions = [...this.$store.state.questions];
@@ -67,5 +75,8 @@ export default {
 section {
     margin-left: auto;
     margin-right: auto;
+}
+button {
+  margin: 10px;
 }
 </style>
