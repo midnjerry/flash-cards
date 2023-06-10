@@ -705,6 +705,16 @@ export default createStore({
           question: 'Why do some methods use the `throws` keyword?',
           answer: 'This tells other developers that the code in the method could throw an exception.  This is useful when another dev is using your API.  It is also required if you do not want to wrap an Exception in a try-catch block.'
         },
+        {
+          language: 'Java', category: 'File IO', curriculum: 'module-1-week8',
+          question: 'List one way you can read a file?',
+          answer: 'You can use `Scanner`, `FileInputStream`, `FileReader`, or `Files` to read files.'
+        },
+        {
+          language: 'Java', category: 'File IO', curriculum: 'module-1-week8',
+          question: 'List one way you can read a file?',
+          answer: 'You can use `Scanner`, `FileInputStream`, `FileReader`, or `Files` to read files.'
+        },
     ]
   },
   mutations: {
