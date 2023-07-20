@@ -720,7 +720,72 @@ export default createStore({
           question: 'List one way you can read a file?',
           answer: 'You can use `Scanner`, `FileInputStream`, `FileReader`, or `Files` to read files.'
         },
-    ]
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What is a database?',
+          answer: 'A database is an organized collection of data that allows for quick retrieval and updates.'
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What is a relational database?',
+          answer: 'A relational database consists of tables that provide a strict format for records to be structured.  This allows for extremely fast queries.'
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What is a non-relational database?',
+          answer: 'A non-relational database stores records as unstructured objects using a format like JSON.  This allows for quick prototyping and simpler design.'
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What is RDBMS?',
+          answer: 'RDBMS stands for Relational DataBase Management System.  It is a computer application that manages the definition, storage, retrieval, and administration of databases.'          
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'Name three popular Relational Database Management Systems used in the industry.',
+          answer: 'Oracle, MySQL, Microsoft SQL Server, PostgreSQL, SQLite, and MariaDB'         
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What does SQL stand for, and what is it used for?',
+          answer: 'Structured Query Language - it is the language used to write queries and commands to on an RDBMS'
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What is the difference between MySql and Sql?',
+          answer: 'SQL is a querying programming language for managing RDBMS.  In contrast, MySQL is an open-source RDBMS that employs its own variant of SQL.  MySQL is software, SQL is a language.'
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What is T-SQL?',
+          answer: 'T-SQL is the SQL variant for the "Microsoft SQL Server" RDBMS product.  It provides advanced features like variables and stored procedures that SQL by itself does not offer.'
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What is PL/SQL?',
+          answer: 'PL/SQL is a block structured language for the Oracle RDBMS that allows you to write procedures and code branching logic in SQL.'
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What is SQLite?',
+          answer: 'SQLite is a C-language library that implements a small, fast, full-featured, SQL database engine. SQLite is built into all mobile phones and most computers.  It is great for small and mid-size projects, but does not provide the performance and scalability necessary for large enterprise applications'
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What is the difference between MySql and PostgreSQL?',
+          answer: 'MySQL is a relational database management system that lets you store data as tables with rows and columns. It’s a popular system that powers many web applications, dynamic websites, and embedded systems. PostgreSQL is an object-relational database management system that offers more features than MySQL. It gives you more flexibility in data types, scalability, concurrency, and data integrity.'
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'MySql and PostgreSQL are both open-source, which means enterprise companies can use them without paying license fees.',
+          answer: 'true'
+        },
+        {
+          language: '', category: 'Databases', curriculum: 'module-2-week1',
+          question: 'What is MariaDB?',
+          answer: 'MariaDB was created in 2009 as an open-source RDBMS fork of MySql after Oracle acquired the open-source MySql RDBMS.  It improved upon MySql performance and features.'
+        },
+          ]
   },
   mutations: {
   },
