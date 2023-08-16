@@ -16,7 +16,6 @@ export default createStore({
       'Keaton Kido',
       'Maher Nassri',
       'Matt Xiao',
-      'Michael Tarquini',
       'Patrick Solomon',
       'Shawn Chan',
       'Shawn Ervin',
@@ -785,6 +784,63 @@ export default createStore({
           question: 'What is MariaDB?',
           answer: 'MariaDB was created in 2009 as an open-source RDBMS fork of MySql after Oracle acquired the open-source MySql RDBMS.  It improved upon MySql performance and features.'
         },
+        {
+          language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+          question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to get all records sorted by age from lowest to highest?',
+          answer: 'SELECT * FROM employees ORDER BY age'
+        },
+        {
+          language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+          question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to get all records sorted by age from highest to lowest?',
+          answer: 'SELECT * FROM employees ORDER BY age DESC'
+        },
+        {
+          language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+          question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to get all records sorted by age from highest to lowest?',
+          answer: 'SELECT * FROM employees ORDER BY age DESC'
+        },
+        {
+          language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+          question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to get all last names that start with D?',
+          answer: 'SELECT * FROM employees WHERE last_name LIKE \'D*\';'
+        },
+        {
+          language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+          question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to top 2 oldest people, with oldest person listed first?',
+          answer: 'SELECT * FROM employees ORDER BY age DESC LIMIT 2;'
+        },
+        {
+          language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+          question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to count all records in the table?',
+          answer: 'SELECT COUNT(1) FROM employees;'
+        },
+        
+          {
+            language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+            question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to get the sum of all ages?',
+            answer: 'SELECT SUM(age) FROM employees;'
+          },
+          {
+            language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+            question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to get the minimum age?',
+            answer: 'SELECT MIN(age) FROM employees;'
+          },
+          {
+            language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+            question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to get the maximum age?',
+            answer: 'SELECT MAX(age) FROM employees;'
+          },
+          {
+            language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+            question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to get the average age?',
+            answer: 'SELECT AVG(age) FROM employees;'
+          },
+          {
+            language: 'SQL', category: 'Databases', curriculum: 'module-2-week2',
+            question: 'For a table \'employees\' with fields \'first_name\', \'last_name\', and \'age\'.  What is SQL query to get the count for each occurrence of a last name?  Output should be 2 fields: \'last_name\' and \'count\'',
+            answer: 'SELECT last_name, COUNT(*) FROM employees GROUP BY last_name;'
+          },
+
           ]
   },
   mutations: {
