@@ -311,7 +311,8 @@ export default createStore({
         },
         {
           language: 'Java', category: 'Intro to Objects: Strings', curriculum: 'module-1-week-2',
-          question: 'If str = "Hello World", how do you get substring "llo"?',
+          question: 'Based on the code below, how would you get a substring of value: "llo"?',          
+          code: 'String str = "Hello World";',
           answer: 'str.substring(2, 5)'
         },
         {

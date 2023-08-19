@@ -15,10 +15,12 @@
       v-bind:isFlipped="isFlipped"
     />
     <p>Score: {{ score }}</p>
+
   </main>
 </template>
 
 <script>
+
 import FlashCard from "../components/FlashCard.vue";
 import Timer from '../components/Timer.vue';
 

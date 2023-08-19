@@ -2,6 +2,9 @@
   <section>
     <div class="category">{{ question.category }}</div>
     <h2 class="question">{{ question.question }}</h2>
+    <pre v-if="question.code" class="code"><code v-bind:class="question.language">
+    {{  question.code }}
+    </code></pre>
     <h3 v-if="isFlipped" class="answer"> {{ question.answer }} </h3>
     <div v-else id="button-container">
       <button v-on:click="displayAnswer">Display</button>
@@ -10,6 +13,8 @@
 </template>
 
 <script>
+import Prism from "prismjs";
+import "prismjs/themes/prism-okaidia.css";
 export default {
   props: ["question", "isFlipped"],
   data() {
@@ -22,6 +27,11 @@ export default {
       this.$emit('flipEvent', true);
     },
   },
+  mounted() {
+    window.Prism = window.Prism || {};
+    window.Prism.manual = true;
+    Prism.highlightAll(); //
+  }
 };
 </script>
 
@@ -33,6 +43,7 @@ section {
   grid-template-areas: 
    ". . category"
    "question question question"
+   "code code code"
    "answer answer answer"
    "footer footer footer"
 }
@@ -44,6 +55,10 @@ section {
 
 .question {
   grid-area: question;
+}
+
+.code {
+  grid-area: code;
 }
 
 .answer {
