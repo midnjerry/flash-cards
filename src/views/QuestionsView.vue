@@ -169,7 +169,11 @@ export default {};
   min-width: 860px; /* keeps columns readable; scrolls on mobile */
   border-collapse: collapse;
   font-size: 14px;
+  table-layout: fixed; /* ✅ prevents content from stretching columns */
 }
+
+.col-q { width: 45%; }
+.col-a { width: 45%; }
 
 .table thead th {
   text-align: left;
@@ -226,14 +230,21 @@ export default {};
   margin-right: 8px;
 }
 
-/* Clip long text nicely */
+.col-cat { width: 140px; }
+
+/* Wrap long text (no ellipsis) */
 .cell-clip {
   max-width: 520px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;          /* ✅ allow wrapping */
+  overflow: visible;
+  text-overflow: unset;
+
   font-weight: 700;
   color: #111827;
+
+  word-break: break-word;       /* ✅ breaks long words */
+  overflow-wrap: anywhere;      /* ✅ breaks long tokens/urls */
+  line-height: 1.35;
 }
 
 .col-a .cell-clip {
@@ -241,6 +252,7 @@ export default {};
   color: #374151;
   max-width: 520px;
 }
+
 
 .empty {
   text-align: center;
