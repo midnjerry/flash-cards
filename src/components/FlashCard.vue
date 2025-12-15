@@ -85,41 +85,43 @@ export default {
 </script>
 
 <style scoped>
-/* BNSF-ish palette (inspired): orange + dark + warm neutrals */
+/* Theme A: Industrial Light — clean, bright, subtle orange accents */
 .card {
   --bnsf-orange: #ff6a00;
-  --bnsf-orange-2: #ff8a2a;
   --coal: #121212;
-  --steel: #1c1c1c;
-  --panel: rgba(18, 18, 18, 0.72);
-  --text: #f4f4f4;
-  --muted: rgba(244, 244, 244, 0.72);
-  --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  --ink: #1f2937;         /* slate-ish */
+  --panel: #ffffff;
+  --panel-2: #f6f7f9;
+  --border: rgba(17, 24, 39, 0.12);
+  --text: #111827;
+  --muted: rgba(17, 24, 39, 0.65);
+  --shadow: 0 16px 30px rgba(0, 0, 0, 0.10);
 
   width: min(760px, 92vw);
   margin: 18px auto;
   padding: 18px 18px 14px;
   border-radius: 18px;
+
   color: var(--text);
-  background:
-    radial-gradient(900px 260px at 10% 10%, rgba(255, 106, 0, 0.35), transparent 55%),
-    radial-gradient(700px 240px at 90% 0%, rgba(255, 138, 42, 0.22), transparent 55%),
-    linear-gradient(180deg, #161616, #0e0e0e);
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  border: 1px solid rgba(255, 106, 0, 0.25);
   position: relative;
   overflow: hidden;
 }
 
-/* subtle texture */
+/* subtle “riveted plate” texture */
 .card::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 35%),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 10px);
-  opacity: 0.35;
+    radial-gradient(circle at 20px 20px, rgba(0,0,0,0.06) 0 2px, transparent 3px),
+    radial-gradient(circle at calc(100% - 20px) 20px, rgba(0,0,0,0.06) 0 2px, transparent 3px),
+    radial-gradient(circle at 20px calc(100% - 20px), rgba(0,0,0,0.06) 0 2px, transparent 3px),
+    radial-gradient(circle at calc(100% - 20px) calc(100% - 20px), rgba(0,0,0,0.06) 0 2px, transparent 3px),
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 14px);
+  opacity: 0.55;
   pointer-events: none;
 }
 
@@ -131,6 +133,7 @@ export default {
   position: relative;
   z-index: 1;
   padding-bottom: 10px;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
 }
 
 .badge {
@@ -139,9 +142,8 @@ export default {
   gap: 10px;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255, 106, 0, 0.12);
-  border: 1px solid rgba(255, 106, 0, 0.35);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 106, 0, 0.10);
+  border: 1px solid rgba(255, 106, 0, 0.22);
 }
 
 .dot {
@@ -153,11 +155,11 @@ export default {
 }
 
 .badge-text {
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.4px;
   text-transform: uppercase;
   font-size: 12px;
-  color: rgba(255, 210, 180, 0.95);
+  color: rgba(17, 24, 39, 0.85);
 }
 
 .meta {
@@ -169,17 +171,17 @@ export default {
 .meta-pill {
   padding: 7px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--muted);
-  font-weight: 600;
+  background: rgba(17, 24, 39, 0.06);
+  border: 1px solid rgba(17, 24, 39, 0.10);
+  color: rgba(17, 24, 39, 0.70);
+  font-weight: 700;
   font-size: 12px;
 }
 
 .question {
   position: relative;
   z-index: 1;
-  margin: 6px 0 14px;
+  margin: 12px 0 14px;
   font-size: clamp(20px, 2.4vw, 28px);
   line-height: 1.15;
   letter-spacing: 0.2px;
@@ -191,45 +193,43 @@ export default {
   margin: 0 0 14px;
   padding: 14px 14px;
   border-radius: 14px;
-  background: rgba(0, 0, 0, 0.55);
-  border: 1px solid rgba(255, 106, 0, 0.18);
+  background: #0b1020; /* deep navy for contrast */
+  border: 1px solid rgba(17, 24, 39, 0.14);
   overflow: auto;
   max-height: 280px;
 }
 
-/* Make Prism blend into the theme */
+/* Prism content */
 .code :deep(code) {
   font-size: 13px;
   line-height: 1.5;
 }
 
-/* Answer styling */
 .answer-wrap {
   position: relative;
   z-index: 1;
   padding: 14px;
   border-radius: 16px;
-  background: rgba(255, 106, 0, 0.10);
-  border: 1px solid rgba(255, 106, 0, 0.28);
+  background: rgba(255, 106, 0, 0.08);
+  border: 1px solid rgba(255, 106, 0, 0.20);
 }
 
 .answer-label {
   font-size: 12px;
   letter-spacing: 0.35px;
   text-transform: uppercase;
-  color: rgba(255, 210, 180, 0.9);
+  color: rgba(17, 24, 39, 0.70);
   margin-bottom: 6px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .answer {
   margin: 0;
   font-size: clamp(18px, 2.1vw, 24px);
   line-height: 1.25;
-  color: #fff;
+  color: rgba(17, 24, 39, 0.92);
 }
 
-/* Footer */
 .footer {
   position: relative;
   z-index: 1;
@@ -241,7 +241,7 @@ export default {
 
 .btn {
   appearance: none;
-  border: 0;
+  border: 1px solid rgba(17, 24, 39, 0.12);
   cursor: pointer;
   user-select: none;
   display: inline-flex;
@@ -249,22 +249,23 @@ export default {
   gap: 10px;
   padding: 12px 16px;
   border-radius: 14px;
-  background: linear-gradient(180deg, var(--bnsf-orange), #e95e00);
-  color: #121212;
-  font-weight: 800;
+
+  background: #111827; /* clean dark button */
+  color: #fff;
+  font-weight: 900;
   letter-spacing: 0.2px;
-  box-shadow: 0 12px 22px rgba(255, 106, 0, 0.22), 0 10px 28px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.10);
   transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
 }
 
 .btn:hover {
   transform: translateY(-1px);
-  filter: brightness(1.04);
+  filter: brightness(1.05);
 }
 
 .btn:active {
   transform: translateY(0px);
-  box-shadow: 0 8px 16px rgba(255, 106, 0, 0.18), 0 10px 24px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10);
 }
 
 .btn-icon {
@@ -276,15 +277,15 @@ export default {
   color: var(--muted);
 }
 
-/* Bottom “track” */
+/* clean track bar */
 .bottom-rail {
   margin-top: 14px;
   position: relative;
   z-index: 1;
-  height: 14px;
+  height: 12px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255, 106, 0, 0.35), rgba(255, 106, 0, 0.10));
-  border: 1px solid rgba(255, 106, 0, 0.22);
+  background: linear-gradient(90deg, rgba(17, 24, 39, 0.10), rgba(17, 24, 39, 0.03));
+  border: 1px solid rgba(17, 24, 39, 0.10);
   overflow: hidden;
 }
 
@@ -293,13 +294,13 @@ export default {
   inset: 0;
   background: repeating-linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.35) 0 10px,
-    transparent 10px 18px
+    rgba(255, 106, 0, 0.25) 0 8px,
+    transparent 8px 16px
   );
-  opacity: 0.55;
+  opacity: 0.35;
 }
 
-/* “Signal lights” line under the answer */
+/* Signals look better on light theme */
 .signal-line {
   display: flex;
   align-items: center;
@@ -313,19 +314,19 @@ export default {
   height: 10px;
   border-radius: 999px;
   background: #666;
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.22);
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.10);
 }
-.signal.green { background: #38d46a; }
-.signal.yellow { background: #ffd24a; }
-.signal.red { background: #ff4d4d; }
+.signal.green { background: #2ecc71; }
+.signal.yellow { background: #f1c40f; }
+.signal.red { background: #e74c3c; }
 
 .signal-text {
   margin-left: 6px;
   font-size: 12px;
-  color: rgba(244, 244, 244, 0.78);
+  color: rgba(17, 24, 39, 0.65);
 }
 
-/* Nice flip-ish transition */
+/* Transition */
 .flipfade-enter-active,
 .flipfade-leave-active {
   transition: opacity 160ms ease, transform 160ms ease;
@@ -336,7 +337,6 @@ export default {
   transform: translateY(6px) scale(0.99);
 }
 
-/* Responsive improvements */
 @media (max-width: 520px) {
   .card {
     padding: 14px 14px 12px;
@@ -346,4 +346,5 @@ export default {
     padding: 12px;
   }
 }
+
 </style>
